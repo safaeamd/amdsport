@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/SignUp.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">  
+    <title>SignUp</title>
+</head>
+<body>
+    <nav>
+		<label class="logo">AMD-CLUB</label>	
+        <a href="#"><img id="mar" src="img/FitSafae1 (2).png"></a>
+		<ul>
+			<li><a href="file:///C:/Users/user/Desktop/MY%20CLUBS/MYCLUB.html#">HOME</a></li>
+			<li><a href="file:///C:/Users/user/Desktop/MY%20CLUBS/Contact.html"target="_blanck">CONTACT US</a></li>
+			<li><a href="file:///C:/Users/user/Desktop/MY%20CLUBS/Coaches.html"target="_blanck">COACHES</a></li>
+			<li><a href="file:///C:/Users/user/Desktop/MY%20CLUBS/Pictures.html" target="_blanck"> PICTURES</a></li>
+			<li><a href="file:///C:/Users/user/Desktop/MY%20CLUBS/Planning.html"target="_blanck">PLANING</a></li>
+		</ul>
+	</nav>
+    <div class="back">
+        <div class="form">
+            <h2>Login Here</h2>
+            <input id="bt1" type="text" name="lname" placeholder="Enter Name Here">
+            <input id="bt2" type="text" name="fname" placeholder="Enter FamilyName Here">
+            <input id="bt3" type="email" name="email" placeholder="Enter Email Here">
+            <input id="bt4" type="Password" name="password" placeholder="Enter Password Here">
+            <input id="bt5" type="Password" name="Confpassword" placeholder="Repet Password Here">
+            <input id="btn" type="submit" value="login" onsubmit="fun()">
+                <div class="icon">
+                    <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-google"></ion-icon></a>
+                   
+                </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <footer>
+        <div class="main-content">
+            <div class="left box">
+                <h2>About us</h2>
+                <div class="content">
+                    <p><span style="font-weight: bold;color: white;" >AMD-CLUB</span> c'est la meilleure salle de sport au Maroc <span style="color: black;">!</span> Les dernières machines <br>
+						et les meilleurs trainers à votre service <br> et un rapport qualité<span style="color: black;">/</span>prix imbattable<span style="color: black;">.</span>
+                    </p>
+                    <div class="footer-cool">
+                    <div class="social">
+                        <a href="#"><span class="fab fa-facebook-f"></span></a>
+                        <a href="#"><span class="fab fa-twitter"></span></a>
+                        <a href="#"><span class="fab fa-youtube"></span></a>
+                    </div>
+                </div>
+                </div>
+            </div>
+			<div class="content">
+				<h4 id="ser">Nos servive</h4>
+			<ul class="FOT" style="color: #bbbbbb;">
+				<li>
+					<a href="file:///C:/Users/user/Desktop/MY%20CLUBS/MYCLUB.html#">HOME</a>
+				</li>
+				<li>
+					<a href="file:///C:/Users/user/Desktop/MY%20CLUBS/Contact.html">CONTACT US</a>
+				</li>
+				<li>
+					<a href="file:///C:/Users/user/Desktop/MY%20CLUBS/Coaches.html">COACHES</a>
+				</li>
+				<li>
+					<a href="file:///C:/Users/user/Desktop/MY%20CLUBS/Pictures.html">PICTURES</a>
+				</li>
+				<li>
+					<a href="file:///C:/Users/user/Desktop/MY%20CLUBS/Planning.html">PLANNING</a>
+				</li>
+			</ul>
+			</div>
+            <div class="center box">
+                <h2 id="Adr">Address</h2>
+                <div class="content">
+                    <div class="place">
+                        <span class="fas fa-map-marker-alt"></span>
+                        <span class="text">Maroc,Rabat</span>
+                    </div>
+                    <div class="phone">
+                        <span class="fas fa-phone-alt"></span>
+                        <span class="text">+212 652415455</span>
+                    </div>
+                    <div class="email">
+                        <span class="fas fa-envelope"></span>
+                        <span class="text">saf2206@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+            <div class="right box">
+                <h2 id="Cont">Contact us</h2>
+                 <div class="content">
+                     <form action="#">
+                         <div class="email">
+                             <div class="text">Email*</div>
+                             <input type="email" required>
+                         </div>
+                         <div class="msg">
+                            <div class="text">Message*</div>
+                            <textarea cols="25" rows="2"></textarea>
+                     </form>
+                     <div class="btn">
+                         <button type="submit">Send</button>
+                     </div>
+                 </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.getElementById("btn").onclick=function fun(){
+            if(document.getElementById("bt1").value==""||document.getElementById("bt2").value==""||document.getElementById("bt3").value==""||document.getElementById("bt4").value==""||document.getElementById("bt5").value==""){
+                alert("tout les champs et oblégatoire")
+                return false
+            }
+            let a=document.getElementById("bt1").value
+            let aer=/(?=.*[A-Z])(?=.*[a-z])/g
+            let vaa=aer.test(a)
+            let b=document.getElementById("bt2").value
+            let ber=/(?=.*[A-Z])(?=.*[a-z])/g
+            let va=ber.test(b)
+            let c=document.getElementById("bt3").value
+            let cer=/\w+@(gmail|email).(com|net)/g
+            let val=cer.test(c)
+            let d=document.getElementById("bt4").value
+            let der=/(?=.*[A-Z])(?=.*[a-z])([\w+]{8,14})/
+            let valeur=der.test(d)
+            if(vaa===false){
+                alert("Ton Prénom est incorrect!!!")
+                return false
+            }
+            if (va===false) {
+                alert("Ton Nom est incorrect!!!")
+                return false
+            }
+            if (val===false) {
+                alert("Ton Email est incorrect!!!")
+                return false
+            } 
+            if (valeur===false) {
+                alert("Ton mot de passe est incorrect!!!")
+                return false
+            } 
+            if(document.getElementById("bt4").value!=document.getElementById("bt5").value){
+                alert("Confirmer Bien ton mot de passe")
+                return false
+            }
+            else {
+                return true
+            }
+        }
+    </script>
+</body>
+</html>
